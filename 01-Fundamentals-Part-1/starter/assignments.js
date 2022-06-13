@@ -1,4 +1,4 @@
-let country = 'Mexico';
+let country = 'United States';
 let continent = 'North America';
 let population = '333,807,743 ';
 
