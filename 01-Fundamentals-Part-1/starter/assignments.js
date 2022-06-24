@@ -1,3 +1,4 @@
+/*
 //Lecture: Values and Variables
 
 let country = 'United States';
@@ -41,3 +42,4 @@ let description = country + ' is in ' + continent + ', and its ' + population + 
 console.log(description);
 
 
+*/

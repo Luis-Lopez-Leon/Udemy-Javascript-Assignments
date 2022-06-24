@@ -145,4 +145,42 @@ console.log(x, y);
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 
+
+
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+
+const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+
+console.log(jonas);
+
+//Template literals - assembles multiple pieces into one final string
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew);
+
+console.log(`Just a regular string...`);
+
+console.log('String with\n\
+multiple \n\
+lines');
+
+console.log(`String
+with
+mutiple
+lines with
+backticks key (tilde key)
+`);
+
 */
+
+
+const age = 19;
+const isOldEnough = age >= 18;
+
+if (isOldEnough) {
+
+
+
+}

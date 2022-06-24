@@ -16,7 +16,7 @@ m tall.
 § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
 m tall.
 GOOD LUCK � 
-*/
+
 
 const massMark = 95;
 const heightMark = 1.88;
@@ -30,3 +30,5 @@ console.log(BMIMark, BMIJohn);
 const markHigherBMI = (BMIMark > BMIJohn);
 
 console.log(markHigherBMI);
+
+*/
