@@ -106,7 +106,7 @@ let x = 10 + 5;//result: 15
 x += 10; // x = x + 10; result: 25
 x *= 4;// x = x * 4; result: 100
 x++; //x = x + 1; result 101
-x--; //x = x - 1; 
+x--; //x = x - 1;
 x--; // result 99
 console.log(x);
 
@@ -180,7 +180,7 @@ const age = 15;
 
 const isOldEnough = age >= 18
 
-if (isOldEnough) 
+if (isOldEnough)
 {//if true, will output
 
     console.log('Sarah can start driver license 🚗')
@@ -209,7 +209,7 @@ if(){
 
 }
 
-*/
+
 
 const birthYear = 2012;
 
@@ -223,3 +223,158 @@ if (birthYear <= 2000) {
 
 console.log(century);
 
+
+//------------------------------------------------------
+//Type Conversion and Coercion
+
+//Conversion- maunally convert
+//Coercion- automatically convert behinds the scenes
+
+//type conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));//NaN - Not a Number (invalid numebr)
+
+console.log(String(23), 23);
+
+//type coercion
+console.log('I am ' + 23 + ' years old.');// plus operator between numbers and string are converted to strings
+
+console.log('23' - '10' - 3);// this minus operator converts to numbers to correctly do the computation
+
+console.log('23' * '2');//multiplication operator also converts to numbers to correctly do the computation
+
+let n = '1' + 1;// '11' converted to string
+n = n - 1;// 10 converted to number 11-1 = 10
+console.log(n);
+
+
+//------------------------------------------------------
+//Truthy and Falsy Values
+//5 Falsy values: 0, '', undefined, null, NaN - converted to false when converted to boolean
+//Anything else are true values when converted to boolean
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+console.log(Boolean(NaN));
+
+//In pratice we dont use Boolean()
+//So conversion on Boolean is implicit not explicit, it does coercion behind the scenes
+
+const money = 110;
+if (money) {//Javascript converts to boolean and 0 is a falsy value so it returns false
+    console.log("Don't spend it all");
+} else {
+    console.log('You should get a job');
+}
+
+let height;
+//let height = 0; this will also return false, since 0 is also a falsy value
+if (height) {//heigth it undefined, so undefined takes place of heigh and since its a falsy value, it returns false
+
+    console.log('YAY! Height is defined');
+} else {
+
+    console.log('Height is UNDEFINED');
+}
+
+
+//------------------------------------------------------
+//Equality Operators: == vs ===
+
+const age = '18';
+
+if (age === 18) console.log('You just became an adult (strict)');
+
+if (age == 18) console.log('You just became an adult (loose)');
+//=== returns true or false boolean value
+//=== strict equality operator
+//does not type coercion
+// 18 === 18
+// true
+// 18 === 20
+// false
+
+//== returns true or false boolean value
+//== loose equality operator
+//does type coercion (converts '18' to number)
+//'18' == 18
+// true
+//'18' == 20
+// false
+
+//avoid using == loose equality operator as much as possible
+
+//prompt() asks user for an input
+const favoriteNum = Number(prompt("Whats your favorite number?"));//convert prompt to number
+
+console.log(favoriteNum);
+console.log(typeof favoriteNum);
+
+if (favoriteNum === 23) {//need to convert favoriteNum to number
+    console.log('Cool 23 is ab amazing number');
+} else if (favoriteNum === 7) {
+    console.log('7 is also a cool number');
+}
+else if (favoriteNum === 9) {
+    console.log('9 is also a cool number');
+} else {
+
+    console.log('Number is not 23 or 7 or 9');
+}
+
+//different/not operator !==
+
+if (favoriteNum !== 23) console.log('Why not 23?');
+
+
+
+//------------------------------------------------------
+//Boolean Logic
+
+//AND, OR, NOT operators
+//Truth Tables
+//Combining operators
+
+
+
+//------------------------------------------------------
+//Logical operators
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true //B
+
+console.log(hasDriversLicense && hasGoodVision); // true AND true is TRUE
+
+console.log(hasDriversLicense || hasGoodVision);
+
+console.log(!hasDriversLicense);
+
+//const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (hasDriversLicense && hasGoodVision) {
+
+//     console.log('Sarah is able to drive!');
+// } else {
+
+//     console.log('Someone else should drive');
+// }
+
+const isTired = false;// C
+
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+
+    console.log('Sarah is able to drive!');
+} else {
+
+    console.log('Someone else should drive');
+}
+
+*/
