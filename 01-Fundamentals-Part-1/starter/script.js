@@ -173,14 +173,53 @@ lines with
 backticks key (tilde key)
 `);
 
-*/
 
 
-const age = 19;
-const isOldEnough = age >= 18;
 
-if (isOldEnough) {
+const age = 15;
 
+const isOldEnough = age >= 18
+
+if (isOldEnough) 
+{//if true, will output
+
+    console.log('Sarah can start driver license 🚗')
+
+}
+
+if (age >= 18) {//if true, will output
+
+    console.log('Sarah can start driver license 🚗')
+
+}
+else {
+
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. She must wait ${yearsLeft} more years`)
+
+}
+
+//If else control structure
+/*
+
+if(){
+
+}else {
 
 
 }
+
+*/
+
+const birthYear = 2012;
+
+let century;
+
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);
+
